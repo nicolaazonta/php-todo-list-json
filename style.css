@@ -1,3 +1,8 @@
 body{
     background-color: lightgreen;
 }
+h1{
+    font-weight: 200!important;
+    color: rgba(0, 0, 0, 0.615);
+    font-size: 6rem!important;
+}

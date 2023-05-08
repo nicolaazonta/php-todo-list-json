@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,16 +11,31 @@
     <link rel="stylesheet" href="./style.css">
 
 </head>
+
 <body>
-    
+
     <div class="container w-50 py-5">
-        <div class="card bg-dark text-light my-2">
-            <h1 class="card-title">card</h1>
+        <h1 class="text-center">Todo List</h1>
+        <div class="card my-2 mx-5">
+
+            <ul class="list-group list-group-flush py-1">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>an item</span>
+                    <a class="badge text-bg-warning" href="">
+                        <i class="fa-solid fa-trash fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+
         </div>
-        <div class="card bg-dark">
-            
+        <div class="card my-2 mx-5">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="add a task" aria-describedby="button-addon2">
+                <button class="btn btn-primary" type="button" id="button-addon2">add</button>
+            </div>
         </div>
     </div>
 
 </body>
+
 </html>
