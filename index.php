@@ -14,13 +14,13 @@
 
 <body>
 
-    <div class="container w-50 py-5">
+    <div id="app" class="container w-50 py-5">
         <h1 class="text-center">Todo List</h1>
         <div class="card my-2 mx-5">
 
             <ul class="list-group list-group-flush py-1">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <span>an item</span>
+                <li v-for="task in tasks" class="list-group-item d-flex justify-content-between align-items-center" >
+                    <span>{{ task }}</span>
                     <a class="badge text-bg-warning" href="">
                         <i class="fa-solid fa-trash fa-2x"></i>
                     </a>
@@ -30,12 +30,14 @@
         </div>
         <div class="card my-2 mx-5">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="add a task" aria-describedby="button-addon2">
-                <button class="btn btn-primary" type="button" id="button-addon2">add</button>
+                <input v-model="new_task" @keyup.enter="add_task" type="text" class="form-control" placeholder="add a task" aria-describedby="button-addon2">
+                <button class="btn btn-primary" type="button" id="button-addon2" @click="add_task">add</button>
             </div>
         </div>
     </div>
-
+    <script src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js'></script>
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <script src='./app.js'></script>
 </body>
 
 </html>
