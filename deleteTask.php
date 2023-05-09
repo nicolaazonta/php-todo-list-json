@@ -1,0 +1,1 @@
+<!-- ############# cancellazione (delete): questo file si occupa della cancellazione di un singolo oggetto nell'array -->

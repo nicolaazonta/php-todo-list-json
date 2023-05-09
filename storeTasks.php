@@ -1,6 +1,12 @@
+<!-- ############# scrittura (store): questo file si occupa del salvataggio di una nuova task nella lista -->
+
 <?php
 if (isset($_POST['new_task'])) {
-  $task = $_POST['new_task'];
+  /* $task = $_POST['new_task']; */
+  $task = [
+    "text" => $_POST['new_task'],
+    "done" => false
+  ];
 
   // read the json file with file_get_contents
   //leggo il file json con il comando file_get_contents

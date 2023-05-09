@@ -2,7 +2,10 @@
 $file_path = './tasks.json';
 
 if (isset($_POST['new_task'])) {
-  $task = $_POST['new_task'];
+  $task = [
+    "text" => $_POST['new_task'],
+    "done" => false
+  ];
 
   // read the json file with file_get_contents
   $tasks_string = file_get_contents($file_path);

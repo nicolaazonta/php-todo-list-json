@@ -1,1 +1,12 @@
-["prova","ciao","fare la spesa","tagliare l'erba","piantare le piante in terra"]
+[
+    {
+        "text" : "test",
+        "done" : "true"
+    },
+    {
+        "text" : "test_1",
+        "done" : "true"
+    },
+
+
+]
