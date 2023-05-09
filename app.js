@@ -33,16 +33,10 @@ createApp({
         })
 
     },
-    update_task(task, index) {
+    update_task(index) {
       console.log('update task');
       const data = {
         index: index
-      }
-
-      if (task.done) {
-        task.done = false;
-      } else {
-        task.done = true;
       }
 
       axios.post(
@@ -60,7 +54,7 @@ createApp({
 
 
     },
-    delete_task(task, index) {
+    delete_task(index) {
       console.log('delete task');
 
 
