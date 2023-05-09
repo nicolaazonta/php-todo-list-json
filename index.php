@@ -19,8 +19,9 @@
         <div class="card my-2 mx-5">
 
             <ul class="list-group list-group-flush py-1">
-                <li v-for="task in tasks" class="list-group-item d-flex justify-content-between align-items-center" >
+                <li v-for="(task, index) in tasks" class="list-group-item d-flex justify-content-between align-items-center" >
                     <span  @click="update_task" :class="{ 'text-decoration-line-through': task.done }" name="created_task" >{{ task.text }}</span>
+                    {{index}}
                     <a class="badge text-bg-warning" @click="delete_task" >
                         <i class="fa-solid fa-trash fa-2x"></i>
                     </a>

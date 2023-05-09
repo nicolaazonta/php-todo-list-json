@@ -10,12 +10,13 @@ createApp({
   methods: {
 
     add_task() {
-      console.log('add a new task to the list');
+      console.log('add task');
 
       const data = {
-        new_task: this.new_task
-        
+        new_task: this.new_task        
       }
+
+      this.new_task = '';
 
       axios.post(
         './storeTasks.php',
