@@ -20,8 +20,8 @@
 
             <ul class="list-group list-group-flush py-1">
                 <li v-for="task in tasks" class="list-group-item d-flex justify-content-between align-items-center" >
-                    <span :class="{ 'text-decoration-line-through': task.done }" >{{ task.text }}</span>
-                    <a class="badge text-bg-warning" href="">
+                    <span  @click="update_task" :class="{ 'text-decoration-line-through': task.done }" name="created_task" >{{ task.text }}</span>
+                    <a class="badge text-bg-warning" @click="delete_task" >
                         <i class="fa-solid fa-trash fa-2x"></i>
                     </a>
                 </li>

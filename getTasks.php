@@ -1,6 +1,8 @@
-<!-- ############# lettura (read): questo file legge la lista di tasks e la restituisce in formato json -->
+
 
 <?php
+//############# lettura (read): questo file legge la lista di tasks e la restituisce in formato json
+
 
 //recupero i file dalla stringa json con il comando file_get_contents()
 $tasks_json_string = file_get_contents('tasks.json');

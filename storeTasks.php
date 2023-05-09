@@ -1,6 +1,6 @@
-<!-- ############# scrittura (store): questo file si occupa del salvataggio di una nuova task nella lista -->
 
 <?php
+//############# scrittura (store): questo file si occupa del salvataggio di una nuova task nella lista 
 if (isset($_POST['new_task'])) {
   /* $task = $_POST['new_task']; */
   $task = [

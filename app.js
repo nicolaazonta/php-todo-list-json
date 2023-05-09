@@ -14,6 +14,7 @@ createApp({
 
       const data = {
         new_task: this.new_task
+        
       }
 
       axios.post(
@@ -28,6 +29,16 @@ createApp({
         .catch(error => {
           console.error(error.message);
         })
+
+    },
+    update_task() {
+      console.log('update task');
+
+
+    },
+    delete_task() {
+      console.log('delete task');
+
 
     },
   },
