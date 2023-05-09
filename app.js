@@ -4,7 +4,8 @@ createApp({
     return {
       tasks: null,
       api_url: './app_index.php',
-      new_task: ''
+      new_task: '',
+      index: ''
     }
   },
   methods: {
@@ -13,7 +14,7 @@ createApp({
       console.log('add task');
 
       const data = {
-        new_task: this.new_task        
+        new_task: this.new_task
       }
 
       this.new_task = '';
@@ -32,12 +33,34 @@ createApp({
         })
 
     },
-    update_task() {
+    update_task(task, index) {
       console.log('update task');
+      const data = {
+        index: index
+      }
+
+      if (task.done) {
+        task.done = false;
+      } else {
+        task.done = true;
+      }
+
+      axios.post(
+        './updateTasks.php',
+        data,
+        {
+          headers: { 'Content-Type': 'multipart/form-data' }
+        }).then(response => {
+          //console.log(response);
+          this.tasks = response.data
+        })
+        .catch(error => {
+          console.error(error.message);
+        })
 
 
     },
-    delete_task() {
+    delete_task(task, index) {
       console.log('delete task');
 
 
