@@ -1,12 +1,12 @@
 [
     {
         "text" : "test",
-        "done" : "true"
+        "done" : true
     },
     {
         "text" : "test_1",
-        "done" : "true"
-    },
+        "done" : false
+    }
 
 
 ]
