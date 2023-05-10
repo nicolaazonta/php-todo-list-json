@@ -15,7 +15,7 @@ $index = $_POST['index'];
 
 
 //elimino l'oggetto dell'array
-unset($tasks_array[$index]);
+array_splice($tasks_array, $index, 1);
 
 
 // convert the array back into a json string
