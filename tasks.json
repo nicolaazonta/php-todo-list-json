@@ -1,14 +1,1 @@
-[
-    {
-        "text": "ciao",
-        "done": true
-    },
-    {
-        "text": "prova",
-        "done": false
-    },
-    {
-        "text": "ei",
-        "done": false
-    }
-]
+[]

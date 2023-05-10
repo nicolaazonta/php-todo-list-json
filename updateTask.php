@@ -1,22 +1,5 @@
-
 <?php
 //############# aggiornamento (update): questo file si occupa della modifica di un singolo oggetto nell'array 
-
-
-/*   $task = [
-    "text" => $_POST['new_task'],
-    "done" => false
-  ];
-
-
-$taskStatus = $_POST['created_task'['index']]; */
-
-
-
-/* $task = [
-  "text" => $_POST['new_task'],
-  "done" => false
-]; */
 
 // read the json file with file_get_contents
 //leggo il file json con il comando file_get_contents
@@ -30,18 +13,9 @@ $tasks_array = json_decode($tasks_string, true);
 /* array_unshift($tasks_array, $task); */
 $index = $_POST['index'];
 
-/* $taskStatus = $tasks_array[$index]['done']; */
 
-
+//inverto il valore del 'done', quindi se è true diventa false e viceversa
 $tasks_array[$index]['done'] = !$tasks_array[$index]['done'];
-/* if ($taskStatus) {
-  $taskstatus = false;
-} else {
-  $taskstatus = true;
-} */
-
-/* $tasks_array[$index]['done'] = $taskStatus; */
-
 
 // convert the array back into a json string
 //riconverto l'array in una stringa json 
